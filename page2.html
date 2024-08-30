@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- kommentarer i html skrivs såhär -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dongens Coding School</title>
+
+    <script>
+        document.getElementById('hamburger').onclick = function() {
+            alert("dongen klicka");
+        };
+    </script>
+    <style>
+        #wrapper{
+            height: 100vh;
+        }
+      .divar {
+        width: 80%;
+        height: 20%;
+        padding: 10%;
+        margin-bottom:10px;
+        display: flex;
+      }
+      #div1 {
+        background-color: red;
+        height: 500px;
+      }
+      #div2 {
+        background-color: green;
+      }
+      #div3 {
+        background-color: grey;
+      }
+      #div4 {
+        background-color: purple;
+      }
+      #footer {
+        background-color: black;
+      }
+
+      nav {
+        position: relative;
+    }
+    
+    .hamburger {
+        cursor: pointer;
+        display: inline-block;
+        padding: 15px;
+    }
+    
+    .line {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 5px 0;
+    }
+    
+    </style>
+
+    <!-- <link rel="stylesheet" href="style.css"> --></head
+  ><!-- glöm inte stänga  -->
+
+  <body>
+    <div id="wrapper">
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+      <div id="div1" class="divar"></div>
+      <div id="div2" class="divar"></div>
+      <div id="div3" class="divar"></div>
+      <div id="div4" class="divar"></div>
+      <footer id="footer" class="divar">footer</footer>
+    </div>
+    
+  </body>
+</html>

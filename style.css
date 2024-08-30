@@ -1,0 +1,86 @@
+/* kommentar i CSS */
+
+
+/* man kan referera ett elementet direkt med dess tag, men då hänger det med på alla H1 taggar */
+h1 
+{
+  color: #f1f1f1;
+}
+
+.lite-text{
+  color: #2196F3;  /* blå färg */
+}
+
+/* Du kan även referera flera olika tags med samma styling */
+button,
+h1,
+.lite-text
+{
+  font-family: 'Fira Code', monospace;
+}
+
+button{
+border-radius: 5px;
+width: 80px;
+height: 25px;
+}
+
+#knapp:hover{
+  background-color: #4CAF50;
+  cursor: pointer;
+}
+
+.sajtens-header{
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 20px; 
+}
+
+#dongensBildContainer
+{
+text-align: center;
+}
+
+#dongensBild
+{
+  height: 60%;
+  width: 80%;
+  border-radius: 10px;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #dongensBild {
+      height: 300px; /* Smaller image on smaller screens */
+      width: 80%; /* Full width of the container */
+      border-radius: 30%;
+    }
+  
+    .sajtens-header, #dongensBildContainer {
+      padding: 10px;
+    }
+  
+    button {
+      width: 100%; /* Full width buttons for easier clicking on touch devices */
+      height: 40px; /* Larger button for easier interaction */
+    }
+  
+    h1, .lite-text {
+      font-size: 16px; /* Smaller text on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 14px; /* Even smaller text for very small devices */
+    }
+  
+    .lite-text {
+      font-size: 12px;
+    }
+  
+    button {
+      height: 50px; /* Larger touch targets on very small screens */
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- kommentarer i html skrivs såhär -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dongens Coding School</title>
+
+<link rel="stylesheet" href="style.css">
+<script> 
+<!--  Man kan ladda JavaScript direkt i header eller länka till ett separat dokument med <script src=""  --> 
+  function clickMeTo(){
+document.getElementById('dongensBild').src = 'https://plus.unsplash.com/premium_photo-1664475282327-b1fe8e56e9e7?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+}
+</script>
+
+<!--  Det är även tillåtet att lägga CSS i html headern mellan style tag  -->
+<style>
+#dongensPageContent{
+    background: rgb(99,102,241);
+    background: linear-gradient(90deg, rgba(99,102,241,1) 0%, rgba(218,70,239,1) 42%, rgba(241,244,253,1) 83%);
+}
+</style>
+</head><!-- glöm inte stänga  -->
+
+<body id="dongensPageContent">
+<!--  du kan lägga vad du vill i en div, det e bara en container för att avgränsa koden med  -->
+    <div class="sajtens-header"> 
+        <h1>
+        Hello, Dongen!
+        </h1>
+<!-- du kan även styla text direkt i html, men det är lite opraktiskt att hårdkoda text  -->
+        <p class="lite-text">
+        Click the  <strong>button</strong> to learn <i>JavaScript</i>
+        </p>
+        <button onclick="clickMe()" id="knapp">
+        Click me 
+        </button>
+        
+<!--  Det funkar även att lägga styling direkt i elementet, men best practice är att ha separata filer för både javascript och CSS  -->   
+        <button style="background-color: blue; color:ghostwhite;" onclick="clickMeTo()">
+        Or me 
+        </button>   
+    </div>
+    
+    
+    <!-- Det finns lite olika sätt att länka in bilder, enklast är <img src="www.bildUrl.com"  /> -->
+    <div id="dongensBildContainer">
+    <!-- men denna ligger inte online så fick göra om bilden till base64 för att dela den, så länkar den i javascriptet nedan  -->
+    <img id="dongensBild" />    
+<!-- detta elementet är självstängade alltså <img/>  -->
+</div>
+
+<!-- body elementet samt alla andra element i html stänger du med samma tag som du öppnar med, fast med </elementNamn > -->
+
+<!-- ibland behöver du även lägga scriptet sist i dokumentet så att alla element är inlästa -->
+<script src="script.js"></script>
+</body>
+</html>
