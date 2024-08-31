@@ -4,62 +4,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dongens Coding School</title>
-
-    <script>
-        document.getElementById('hamburger').onclick = function() {
-            alert("dongen klicka");
-        };
-    </script>
-    <style>
-        #wrapper{
-            height: 100vh;
-        }
-      .divar {
-        width: 80%;
-        height: 20%;
-        padding: 10%;
-        margin-bottom:10px;
-        display: flex;
-      }
-      #div1 {
-        background-color: red;
-        height: 500px;
-      }
-      #div2 {
-        background-color: green;
-      }
-      #div3 {
-        background-color: grey;
-      }
-      #div4 {
-        background-color: purple;
-      }
-      #footer {
-        background-color: black;
-      }
-
-      nav {
-        position: relative;
-    }
-    
-    .hamburger {
-        cursor: pointer;
-        display: inline-block;
-        padding: 15px;
-    }
-    
-    .line {
-        width: 25px;
-        height: 3px;
-        background-color: black;
-        margin: 5px 0;
-    }
-    
-    </style>
-
-    <!-- <link rel="stylesheet" href="style.css"> --></head
-  ><!-- glöm inte stänga  -->
+    <title>Dongens Coding School</title>   
+    <link rel="stylesheet" href="css/style-page2.css">
+     </head><!-- glöm inte stänga  -->
 
   <body>
     <div id="wrapper">
@@ -69,6 +16,7 @@
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
+            <button class="loginbtn" onclick="openDongensModal()" ><span id="btntext"> <img id="loginicon" src="images/usericon.png"> signin/signup</span></button>
         </nav>
       <div id="div1" class="divar"></div>
       <div id="div2" class="divar"></div>
@@ -77,5 +25,31 @@
       <footer id="footer" class="divar">footer</footer>
     </div>
     
+
+  <!--Modal for login from w3 https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_modal -->
+
+  <div id="modal" style="display: none;" >
+    <div class="modal-overlay">
+      <div class="modal-wrapper">
+        <span onclick="closeDongensModal()">&times;</span>    <!-- &times; is an HTML entity that represents the multiplication sign (×). -->
+
+      <!-- use form to send the data to backend server -->
+        <form id="loginForm">  
+          <label for="nameInput"> Username</label>
+          <input id="nameInput" type="text" name="username">
+          <label for="passwordInput"> Password</label>
+          <input id="passwordInput" type="password" name="password">
+          <button id="submitBtn" type="submit">LOGIN</button>
+        <p>Not yet a member? </p> 
+        <a href="index.html">Sign up here</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/page2.js"></script> 
+  
+
   </body>
 </html>
